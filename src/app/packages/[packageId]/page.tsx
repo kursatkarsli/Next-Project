@@ -8,7 +8,7 @@ import { cookies } from "next/headers";
 
  const  PackageDetail = async (props:any) => {
   const {params} = props;
-  console.log(params,"props deneme");
+  console.log(params, "props deneme");
 
   const res = await fetch(`https://caseapi-fe.paramtech.com.tr/api/packages/${params.packageId}`,{
     headers:{
