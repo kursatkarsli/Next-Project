@@ -1,0 +1,89 @@
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.title {
+  color: #4a4a4a;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.selectedCard {
+  border: 2px solid green;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.cards {
+  border-radius: 0.5rem;
+}
+.ant-card-body {
+  padding: 0;
+}
+.image {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.layout {
+  align-items: center;
+  padding-block: 1rem;
+  max-height: 90vh;
+  overflow: scroll;
+}
+.content {
+  max-width: 75%;
+  box-shadow: 0px 3px 8px 5px #0000004d;
+  background-color: #ffffff;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+.layout {
+  align-items: center;
+  padding-block: 1rem;
+  max-height: 90vh;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styles */
+.content::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar */
+}
+
+.content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg,
+    #6a11cb 0%,
+    #2575fc 100%
+  ); /* Gradient color for the thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #f1f1f1; /* Border around the thumb */
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    45deg,
+    #3a0ca3 0%,
+    #1f7efc 100%
+  ); /* Darker gradient on hover */
+}
+
+.content::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* Color of the corner */
+}

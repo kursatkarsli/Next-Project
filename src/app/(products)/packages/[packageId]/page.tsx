@@ -13,7 +13,6 @@ import { cookies } from "next/headers";
     }
   });
   const data = await res.json();
-  console.log('DATA', data)
   
 
   return (
