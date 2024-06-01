@@ -5,7 +5,7 @@ import "./loginForm.css";
 import { MailOutlined, UserOutlined } from "@ant-design/icons";
 import { useLoginMutation } from "@/redux/slices/apiSlice";
 import { useRouter } from "next/navigation";
-
+import {setCookie} from 'cookies-next'
 export default function Login() {
   const [login, { isLoading }] = useLoginMutation();
 
@@ -14,6 +14,7 @@ export default function Login() {
     try {
       const { token } = await login(values).unwrap();
       localStorage.setItem("token", token);
+      setCookie('token',token)
       router.push("/packages");
     } catch (err) {
       message.error("Login failed. Please check your credentials.");

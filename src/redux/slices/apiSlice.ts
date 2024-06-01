@@ -1,6 +1,5 @@
 // redux/slices/apiSlice.ts
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { cookies } from "next/headers";
 
 interface User {
   _id: string;

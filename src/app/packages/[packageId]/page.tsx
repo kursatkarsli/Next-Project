@@ -1,28 +1,24 @@
 // app/package/[id]/page.tsx
 
-import { useParams } from "next/navigation";
-import { useGetPackageDetailsQuery } from "../../../redux/slices/apiSlice";
-import { Card, Button } from "antd";
+import { Card } from "antd";
 import DetailPackageCheckoutButton from "./DetailPackageCheckoutButton";
 import { cookies } from "next/headers";
 
  const  PackageDetail = async (props:any) => {
   const {params} = props;
-  console.log(params, "props deneme");
-
   const res = await fetch(`https://caseapi-fe.paramtech.com.tr/api/packages/${params.packageId}`,{
     headers:{
       "Content-Type": "application/json",
-      Authorization: `Bearer ${cookies().get('token')}`,
+      "Authorization": `Bearer ${cookies().get('token')?.value}`,
     }
   });
   const data = await res.json();
-
+  console.log('DATA', data)
   
 
   return (
     <Card title={data!.name}>
-      {/* <p>{data!.details.join(", ")}</p> */}
+      <p>{data!.details.join(", ")}</p>
       <p>
         {data!.price} {data!.currency}
       </p>
