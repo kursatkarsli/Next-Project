@@ -1,0 +1,18 @@
+.login_form{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.login_form > form{
+    min-width: 25rem;
+    box-shadow: 0px 5px 20px 20px #00000008;
+    background: #ffffff;
+    padding: 3.25rem 2.15rem;
+}
+.login_form > form > input{
+width: 100%;
+}
