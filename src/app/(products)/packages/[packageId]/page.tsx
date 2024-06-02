@@ -1,11 +1,9 @@
 // app/package/[id]/page.tsx
 
-import { Button, Card, Col, message, Row, Typography } from "antd";
-import DetailPackageCheckoutButton from "./DetailPackageCheckoutButton";
+import { Card, Col, Row } from "antd";
 import { cookies } from "next/headers";
 import Image from "next/image";
 import styles from "./DetailPackage.module.css";
-import { Content } from "antd/es/layout/layout";
 import Tags from "./Tags";
 import DetailExplanationTitle from "./DetailExplanationTitle";
 import PackageDetailInfo from "./PackageDetailInfo";

@@ -8,7 +8,7 @@ const App: React.FC = () => (
       status="success"
       title="Başarıyla Tamamlandı!"
       extra={[
-        <Button type="primary" key="console">
+        <Button type="primary" key={'Result Button'}>
           <Link href={"/"}>Anasayfaya Dön</Link>
         </Button>,
       ]}

@@ -59,37 +59,28 @@
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar Styles */
 .content::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-  height: 12px; /* Height of the scrollbar */
+  width: 12px;
+  height: 12px;
 }
 
 .content::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the track */
-  border-radius: 10px; /* Rounded corners */
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 .content::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    45deg,
-    #6a11cb 0%,
-    #2575fc 100%
-  ); /* Gradient color for the thumb */
-  border-radius: 10px; /* Rounded corners */
-  border: 3px solid #f1f1f1; /* Border around the thumb */
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
 }
 
 .content::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    45deg,
-    #3a0ca3 0%,
-    #1f7efc 100%
-  ); /* Darker gradient on hover */
+  background: linear-gradient(45deg, #3a0ca3 0%, #1f7efc 100%);
 }
 
 .content::-webkit-scrollbar-corner {
-  background: #f1f1f1; /* Color of the corner */
+  background: #f1f1f1;
 }
 ul.customList {
   list-style-type: disc;

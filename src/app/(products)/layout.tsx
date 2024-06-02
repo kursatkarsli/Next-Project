@@ -1,4 +1,3 @@
-// app/layout.tsx
 "use client";
 import "@/app/globals.css";
 import { Col, Row } from "antd";

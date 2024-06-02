@@ -1,29 +1,26 @@
 // app/checkout/page.tsx
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-import {
-  Form,
-  Input,
-  Button,
-  message,
-  Layout,
-  Row,
-  Col,
-  Card,
-  List,
-  Typography,
-} from "antd";
-import { useRouter } from "next/navigation";
 import {
   useCheckoutMutation,
   useGetContractQuery,
 } from "@/redux/slices/apiSlice";
-import Link from "next/link";
-import styles from "./Checkout.module.css";
-import PackagesInBasket from "../packages/[packageId]/PackagesInBasket";
-import CheckoutButton from "../packages/[packageId]/CheckoutButton";
+import {
+  Button,
+  Card,
+  Col,
+  Form,
+  Input,
+  Layout,
+  message,
+  Row,
+  Typography,
+} from "antd";
+import { useRouter } from "next/navigation";
 import ReactInputMask from "react-input-mask";
+import PackagesInBasket from "../packages/[packageId]/PackagesInBasket";
+import styles from "./Checkout.module.css";
 const { Header, Content } = Layout;
 type CardInfo = {
   cardNumber: string;

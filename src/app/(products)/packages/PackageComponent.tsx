@@ -17,7 +17,7 @@ import { useGetPackagesQuery } from "@/redux/slices/apiSlice";
 import styles from "./Packages.module.css"; // Assuming you have a CSS module for custom styles
 import Image from "next/image";
 import { setCookie } from "cookies-next";
-const { Header, Content } = Layout;
+const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const Packages = () => {

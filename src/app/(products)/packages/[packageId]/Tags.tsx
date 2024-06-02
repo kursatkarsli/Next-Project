@@ -1,6 +1,5 @@
 "use client";
-import { Col, Typography } from "antd";
-import styles from "./DetailPackage.module.css";
+import { Typography } from "antd";
 function Tags({ tag }: any) {
   return (
     <Typography.Text style={{ fontSize: "12px" }}>{tag}</Typography.Text>
