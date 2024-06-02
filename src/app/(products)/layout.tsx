@@ -11,7 +11,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const token = localStorage.getItem("token");
+  const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
+  const userMail = typeof window !== 'undefined' ? localStorage.getItem("email") : null;
   const router = useRouter();
   if (!token) router.push("/login");
 
@@ -41,7 +42,7 @@ export default function RootLayout({
               </div>
             </Col>
             <Col>
-              <div>{localStorage.getItem("email")}</div>
+              <div>{userMail}</div>
             </Col>
           </Row>
         </Row>

@@ -11,10 +11,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const token = localStorage.getItem("token");
-  const router = useRouter();
-  if (!token) router.push("/login");
-
   return (
     <html lang="en">
       <body>

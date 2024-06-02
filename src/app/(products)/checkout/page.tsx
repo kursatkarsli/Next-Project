@@ -52,7 +52,7 @@ const Checkout = () => {
     const totalAmount = selectedPackages.reduce((acc: number, curr: any) => {
       return (acc += curr.price);
     }, 0);
-    const packageIds = selectedPackages.map((packages) => packages._id);
+    const packageIds = selectedPackages?.map((packages) => packages._id);
     const postData = {
       ...values,
       totalAmount,

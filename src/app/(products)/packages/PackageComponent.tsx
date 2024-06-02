@@ -126,7 +126,7 @@ const Packages = () => {
                         <Row>
                           {" "}
                           <ul className={styles.customList}>
-                            {pkg.details.map((detail: any, index: number) => (
+                            {pkg?.details?.map((detail: any, index: number) => (
                               <li key={index} className={styles.customListItem}>
                                 <Text>{detail}</Text>
                               </li>
@@ -147,7 +147,7 @@ const Packages = () => {
                         <Row>
                           {" "}
                           <ul className={styles.customListForTags}>
-                            {pkg.tags.map((detail: any, index: number) => (
+                            {pkg?.tags?.map((detail: any, index: number) => (
                               <li
                                 key={index}
                                 className={styles.customListItemForTag}

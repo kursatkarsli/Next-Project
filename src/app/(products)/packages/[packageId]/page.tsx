@@ -65,7 +65,7 @@ const PackageDetail = async (props: any) => {
                 </Col>
                 <Col span={10}>
                   <ul className={styles.customListForTags}>
-                    {data.tags.map((tag: string, index: number) => (
+                    {data?.tags?.map((tag: string, index: number) => (
                       <li key={index} className={styles.customListItemForTag}>
                         <Tags tag={tag} key={index} />
                       </li>
