@@ -1,12 +1,11 @@
 // app/layout.tsx
 "use client";
-import { Provider } from "react-redux";
 import "@/app/globals.css";
-import { Col, ConfigProvider, Row } from "antd";
+import { Col, Row } from "antd";
 import { useRouter } from "next/navigation";
 import { Header } from "antd/es/layout/layout";
-import { useEffect, useState } from "react";
-import { store } from "@/redux/store";
+import Image from "next/image";
+import { UserOutlined } from "@ant-design/icons";
 
 export default function RootLayout({
   children,
@@ -18,20 +17,37 @@ export default function RootLayout({
   if (!token) router.push("/login");
 
   return (
-
-            <>
-                <Header>
-                  <Row justify="space-between">
-                    <Col>
-                      <div>Company Logo</div>
-                    </Col>
-                    <Col>
-                      <div>User Email</div>
-                    </Col>
-                  </Row>
-                </Header>
-                {children}
-            </>
-     
+    <>
+      <Header style={{ background: "#FFFFFF" }}>
+        <Row justify="space-between">
+          <Col
+            onClick={() => {
+              router.push("/packages");
+            }}
+            style={{
+              cursor: "pointer",
+            }}
+          >
+            <Image
+              src={"/Frame.svg"}
+              alt={"Company Logo"}
+              width="248"
+              height="28"
+            />
+          </Col>
+          <Row>
+            <Col style={{ marginRight: "0.5rem" }}>
+              <div>
+                <UserOutlined />
+              </div>
+            </Col>
+            <Col>
+              <div>{localStorage.getItem("email")}</div>
+            </Col>
+          </Row>
+        </Row>
+      </Header>
+      {children}
+    </>
   );
 }

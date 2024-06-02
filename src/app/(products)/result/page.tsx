@@ -1,24 +1,19 @@
-// app/result/page.tsx
-'use client'
-import { useRouter } from 'next/navigation';
-import { Button } from 'antd';
+import { Button, Result } from "antd";
+import Link from "next/link";
+import styles from './Result.module.css'
+const App: React.FC = () => (
+  <div className={styles.resultContainer}>
+    <Result
+    className={styles.resultCard}
+      status="success"
+      title="Başarıyla Tamamlandı!"
+      extra={[
+        <Button type="primary" key="console">
+          <Link href={"/"}>Anasayfaya Dön</Link>
+        </Button>,
+      ]}
+    />
+  </div>
+);
 
-const Result = () => {
-  const router = useRouter();
-
-  const handleHome = () => {
-    router.push('/');
-  };
-
-  return (
-    <div style={{ maxWidth: 400, margin: 'auto', padding: '1rem', textAlign: 'center' }}>
-      <h1>Payment Successful</h1>
-      <p>Your payment has been processed successfully.</p>
-      <Button type="primary" onClick={handleHome}>
-        Go to Home
-      </Button>
-    </div>
-  );
-};
-
-export default Result;
+export default App;

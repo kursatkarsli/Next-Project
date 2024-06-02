@@ -1,0 +1,12 @@
+.resultCard {
+  width: 31.25rem;
+  height: 18.75rem;
+  box-shadow: 0px 5px 20px 20px #00000008;
+  background: #ffffff;
+}
+.resultContainer{
+    display: flex;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    align-items: center;
+}

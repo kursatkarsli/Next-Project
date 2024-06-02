@@ -42,12 +42,16 @@
   overflow: scroll;
 }
 .content {
-  max-width: 75%;
+  max-width: 60%;
   box-shadow: 0px 3px 8px 5px #0000004d;
   background-color: #ffffff;
   overflow-y: auto;
-  border-radius: 12px;
+  border-radius: 0.5rem;
 }
+.content_description{
+  padding: 1rem !important;
+}
+
 .layout {
   align-items: center;
   padding-block: 1rem;
@@ -86,4 +90,30 @@
 
 .content::-webkit-scrollbar-corner {
   background: #f1f1f1; /* Color of the corner */
+}
+ul.customList {
+  list-style-type: disc;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+ul.customListForTags{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.customListItemForTag {
+  background: #C4C4C4;
+  border-radius: 6px;
+  padding: .1rem .8rem;
+}
+
+.customListItem {
+  margin-bottom: 5px;
+}
+.divider{
+  margin: 0 !important
 }

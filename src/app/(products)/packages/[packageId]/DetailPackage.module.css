@@ -1,0 +1,26 @@
+.detailCard {
+  /* max-width: 60%; */
+  padding: 2rem;
+}
+ul.customListForTags {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.customListItemForTag {
+  background: #c4c4c4;
+  border-radius: 6px;
+  padding: 0.1rem 0.8rem;
+}
+.paragraph {
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  margin-top: 0.8rem;
+}
+.checkoutCardPackageListItem {
+  background: #F2F2F2;
+  padding: .5rem;
+  border-radius: 8px;
+  margin-top: 4px;
+}

@@ -79,11 +79,12 @@ export const apiSlice = createApi({
       }),
     }),
     checkout: builder.mutation<void, { paymentDetails: any }>({
-      query: (paymentDetails) => ({
+      query: (paymentDetails) => {
+        return {
         url: "payment",
         method: "POST",
         body: paymentDetails,
-      }),
+      }}
     }),
   }),
 });
