@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   List,
@@ -24,9 +24,6 @@ const Packages = () => {
   const { data, error, isLoading } = useGetPackagesQuery();
   const [selectedPackages, setSelectedPackages] = useState<any[]>([]);
   const router = useRouter();
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading packages.</div>;
 
   const handleSelect = (selectedPack: any) => {
     const selectedPackageList = selectedPackages.find(
@@ -63,6 +60,14 @@ const Packages = () => {
   const calculateTotalPrice = () => {
     return selectedPackages.reduce((total, pkg) => total + pkg.price, 0);
   };
+  useEffect(() => {
+    const packages = JSON.parse(
+      localStorage.getItem("selectedPackages") || "[]"
+    );
+    setSelectedPackages(packages);
+  }, []);
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading packages.</div>;
   return (
     <Layout className={styles.layout}>
       <Content style={{ padding: "1rem" }} className={styles.content}>
